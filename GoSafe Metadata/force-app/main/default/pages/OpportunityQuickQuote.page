@@ -1,2 +1,78 @@
-<apex:page >
+<apex:page standardController="Opportunity" extensions="OpportunityService" 
+           showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    <head>
+        <div>
+            <apex:image url="/sfc/servlet.shepherd/version/download/{!baner}"/>
+            <p style="font-family: SansSerif; color: rgb(232,151,45); font-size: 29px;">
+                <apex:image url="/sfc/servlet.shepherd/version/download/{!truckIcon}"/>
+                <span style="position: fixed; margin: 5px;">COMMERCIAL AUTO APPLICATION</span>
+            </p>
+        </div>
+        <table style="width: 100%; table-layout: fixed; text-align-last: left;">
+            <tr>
+                <th style="width: 50%;">Agency Name XXXXXXXXXXXXX</th>
+                <th style="width: 50%;">Phone Number XXXXXXXXXXXXXXXXX</th>
+            </tr>
+        </table>
+
+    </head>
+
+    <body>
+        <table cellspacing="0" cellpadding="0" style="font-family: SansSerif; border: none; width: 100%; border-spacing: unset;">
+            <tr style="background:#D3D3D3; border-spacing: unset; height: 45px;">
+                <td style="background: lightgray;">
+                    <span style="margin-left: 20px;"></span>
+                </td>
+                <td style="background: green; color: white; font-weight: bold;">
+                    Applicant Information
+                </td>
+                <td>
+                    <span style="margin-left: 60px;"></span>
+                </td>
+                <td style="background: green; color: white; font-weight: bold;">Proposed Effective Date: XXXXXXXXXXXXXXXXXX</td>
+                
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>Named Insured: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+                <td>Contact Person: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td>DBA: XXXXXXXXXXXXXXXXXX</td>
+                <td>Phone Number: XXXXXXXXXXX</td>
+            <tr>
+                <td>Type of entity: XXXXXXXXXXXXXXXXXX</td>
+                <td>Email Address:  XXXXXXXXXXXXXXXXXXXXXX</td>
+            </tr>
+                <td>Years in Business: X</td>
+                <td>USDOT #: XXXXXXX</td>
+                <td>Policy Term: XX Months</td>
+            <tr>
+            </tr>
+                <td>Mailing Address: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td>Garaging Address: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+            </tr>
+        </table>
+
+        <table style="width:100%; background: lightgray; border-spacing: unset;">
+            <tr>
+                <td style="background: lightgray;">
+                    <span style="margin-left: 20px;"></span>
+                </td>
+                <td style="background: green; color: white; font-weight: bold;">
+                    Requested Coverage
+                </td>
+                <td style="background: lightgray;">
+                    <span style="margin-left: 20px;"></span>
+                </td>
+                
+            </tr>
+        </table>
+
+    </body>
+
 </apex:page>
