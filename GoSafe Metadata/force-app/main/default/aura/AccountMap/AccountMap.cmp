@@ -1,0 +1,28 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome">
+    
+    
+    <aura:attribute name="accountRecord" type="Object"/>
+    <aura:attribute name="recordLoadError" type="String"/>
+    
+    <force:recordData 	aura:id="recordLoader"
+                        recordId="{!v.recordId}"
+                        fields="Name,Garaging_Address__c,Garaging_City__c,Garaging_County__c,Garaging_State__c,Garaging_Zip__c,Mailing_Address__c,Mailing_City__c,Mailing_County__c,Mailing_State__c,Mailing_Zip_Code__c"
+                        targetFields="{!v.accountRecord}"
+                        targetError="{!v.recordLoadError}"
+                      	recordUpdated="{! c.init }" />
+    
+    <aura:attribute name="mapMarkers" type="Object"/>
+    <aura:attribute name="markersTitle" type="String" />
+    <aura:attribute name="selectedMarkerValue" type="String" default="mAILING" />
+
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <!-- the map component -->
+    <lightning:map 
+        mapMarkers="{! v.mapMarkers }"
+        markersTitle="{!v.markersTitle}"
+        selectedMarkerValue="{!v.selectedMarkerValue}"
+        onmarkerselect="{!c.handleMarkerSelect}" />
+    
+</aura:component>
