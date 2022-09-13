@@ -216,11 +216,17 @@
                 <td rowspan="3" style="border: 0px">
                     {!IF(opportunity.Motor_Truck_Cargo__c != '', 'Yes', 'No')}
                 </td>
-                <td style="border: 0px; width: 21%;">
-                    Combinated Limit
+                <td style="border: 0px; width: 12%;">
+                    Limit
+                </td>
+                <td style="border: 0px; width: 10%;">
+                    {!opportunity.Motor_Truck_Cargo__c}
+                </td>
+                <td style="border: 0px;">
+                    Deductible
                 </td>
                 <td style="border: 0px">
-                    {!opportunity.Motor_Truck_Cargo__c}
+                    {!opportunity.Motor_Truck_Cargo_Deductible__c}
                 </td>
                 <td style="border-color: #DEB887; border-top: 0px; border-right: 0px; border-style: solid;">
                     Reefer Breakdown
@@ -237,29 +243,17 @@
             </tr>
             
             <tr style="height: 22px;">
-                <td style="border: 0px">
-                    Federal / MCS90 Filling:
+                <td colspan="2" style="border: 0px">
+                    Federal Cargo (BMC34) Filing:
                 </td>
                 <td style="border: 0px">
-                    XX
-                </td>
-                <td style="border: 0px">
-                    MC/MX:
-                </td>
-                <td style="border: 0px">
-                    {!opportunity.MC__c}
+                    XXXXXX
                 </td>
             </tr>
             
             <tr style="height: 22px;">
                 <td style="border: 0px">
-                    BIPD State Filing:
-                </td>
-                <td style="border: 0px">
-                    XXXXXX
-                </td>
-                <td style="border: 0px">
-                    Docket #:
+                    Cargo State Filing:
                 </td>
                 <td style="border: 0px">
                     XXXXXX
