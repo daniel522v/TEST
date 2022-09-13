@@ -1,26 +1,83 @@
-<apex:page standardController="Opportunity" extensions="OpportunityService" 
+<apex:page standardController="Opportunity" extensions="OpportunityService" renderAs="advanced_pdf"
            showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
     <head>
-        <div>
+        <style>
+            tr,td {
+            	padding-left: 10px;
+            }
+            
+            @page {
+                @top-center {
+                    content: element(header);
+                }
+                @bottom-left {
+                    content: element(footer);
+                }
+            	margin-bottom: 230px;
+           		margin-top: 20px;
+            }
+            div.header {
+                padding: 10px;
+                position: running(header);
+            }
+            div.footer {
+                text-align: -webkit-center;
+                position: running(footer);
+            }
+            .pagenumber:before {
+            	content: counter(page);
+            }
+            .pagecount:before {
+            	content: counter(pages);
+            }
+        </style>
+        
+        <div style="margin-bottom: 40px;">
+            
             <apex:image url="/sfc/servlet.shepherd/version/download/{!baner}"/>
-            <p style="font-family: SansSerif; color: rgb(232,151,45); font-size: 29px;">
-                <apex:image url="/sfc/servlet.shepherd/version/download/{!truckIcon}"/>
-                <span style="position: fixed; margin: 5px;">COMMERCIAL AUTO APPLICATION</span>
-            </p>
+            <div style="font-family: SansSerif; color: rgb(232,151,45); font-size: 25px; margin-top: 0px; margin-bottom: 0px; display: flex;">
+                <apex:image url="/sfc/servlet.shepherd/version/download/{!truckIcon}" style="margin-top: -6px;"/>
+                <span style="margin: 5px; margin-left: 0px; vertical-align: top; font-weight: bold;">COMMERCIAL AUTO APPLICATION</span>
+            </div>
+            <table style="width: 100%; table-layout: fixed; text-align-last: left; font-size: 0.8em;">
+                <tr>
+                    <th style="width: 50%;">Agency Name Go Safe Insurance.</th>
+                    <th style="width: 50%;">Phone Number: (786) 591-7059</th>
+                </tr>
+            </table>
+            
         </div>
-        <table style="width: 100%; table-layout: fixed; text-align-last: left;">
-            <tr>
-                <th style="width: 50%;">Agency Name XXXXXXXXXXXXX</th>
-                <th style="width: 50%;">Phone Number XXXXXXXXXXXXXXXXX</th>
-            </tr>
-        </table>
-
+        
     </head>
-
+    
     <body>
-        <table cellspacing="0" cellpadding="0" style="font-family: SansSerif; border: none; width: 100%; border-spacing: unset;">
-            <tr style="background:#D3D3D3; border-spacing: unset; height: 45px;">
-                <td style="background: lightgray;">
+        
+        <div class="footer">
+            
+            <div style="text-align: center;">
+                <table style="font-family: SansSerif; width: 100%; font-size: 0.8em; margin-top: 100px;">
+                    <tr style="height: 2em;">
+                        <td colspan="1">___________________________</td>
+                        <td colspan="1"></td>
+                        <td colspan="1">___________________________</td>
+                    </tr>
+                    <tr style="height: 2em;">
+                        <td colspan="1">Insured Signature</td>
+                        <td colspan="1"></td>
+                        <td colspan="1">Agent Signature</td>
+                    </tr>
+                    <tr style="height: 2em;">
+                        <td colspan="3" style="font-weight: bold;"><span style="color: blue;">Go Safe Insurance | </span>2111 W 54 Terrace Hialeah, 33016<span style="color: blue;"> | www.gosafeagency.com</span></td>
+                    </tr>
+                </table>
+                
+                <div style="height: 2em;">Page <span class="pagenumber"/> of <span class="pagecount"/></div>
+            </div>
+        </div>
+        
+        <table cellspacing="0" cellpadding="0" style="font-family: SansSerif; border: none; width: 100%; border-spacing: unset; font-size: 0.8em; text-align-last: left;">
+            <tr style="background:#D3D3D3; border-spacing: unset; height: 29px;">
+                <td style="background: lightgray; max-width: 6px;">
                     <span style="margin-left: 20px;"></span>
                 </td>
                 <td style="background: green; color: white; font-weight: bold;">
@@ -29,50 +86,536 @@
                 <td>
                     <span style="margin-left: 60px;"></span>
                 </td>
-                <td style="background: green; color: white; font-weight: bold;">Proposed Effective Date: XXXXXXXXXXXXXXXXXX</td>
-                
+                <td style="background: green; color: white; font-weight: bold;">Proposed Effective Date: 
+                    <apex:outputText value="{0,date, MM/dd/yyyy}">
+                        <apex:param value="{!opportunity.Effective_Date__c}" /> 
+                    </apex:outputText>
+                </td>
             </tr>
         </table>
 
-        <table>
-            <tr>
-                <td>Named Insured: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
-                <td>Contact Person: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+        <table style="font-family: SansSerif; width: 100%; font-size: 0.8em; font-size: 0.8em;">
+            <tr style="height: 2em;">
+                <td colspan="3">Named Insured: {!opportunity.Company_Rep__c}</td>
+                <td colspan="3">Contact Person: {!opportunity.Company_Rep__c}</td>
             </tr>
-            <tr>
-                <td>DBA: XXXXXXXXXXXXXXXXXX</td>
-                <td>Phone Number: XXXXXXXXXXX</td>
-            <tr>
-                <td>Type of entity: XXXXXXXXXXXXXXXXXX</td>
-                <td>Email Address:  XXXXXXXXXXXXXXXXXXXXXX</td>
+            <tr style="height: 2em;">
+                <td colspan="3">DBA: {!opportunity.DBA__c}</td>
+                <td colspan="3">Phone Number: {!opportunity.Phone__c}</td>
             </tr>
-                <td>Years in Business: X</td>
-                <td>USDOT #: XXXXXXX</td>
-                <td>Policy Term: XX Months</td>
-            <tr>
+            <tr style="height: 2em;">
+                <td colspan="3">Type of entity: {!opportunity.Type_of_Business__c}</td>
+                <td colspan="3">Email Address:  {!opportunity.Email__c}</td>
             </tr>
-                <td>Mailing Address: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+            <tr style="height: 2em;">
+                <td colspan="2">Years in Business: {!opportunity.Years_in_Business__c}</td>
+                <td colspan="2">USDOT #: {!opportunity.USDOT__c}</td>
+                <td colspan="2">Policy Term: {!opportunity.Policy_Term__c} Months</td>
             </tr>
-            <tr>
-                <td>Garaging Address: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+            <tr style="height: 2em;">
+                <td colspan="6">Mailing Address: {!opportunity.Mailing_Address__c}, {!opportunity.Mailing_City__c}, {!opportunity.Mailing_State__c}, {!opportunity.Mailing_Zip_Code__c}</td>
+            </tr>
+            <tr style="height: 2em;">
+                <td colspan="6">Garaging Address: {!opportunity.Garaging_Address__c}, {!opportunity.Garaging_City__c}, {!opportunity.Garaging_State__c}, {!opportunity.Garaging_Zip_Code__c}</td>
             </tr>
         </table>
-
-        <table style="width:100%; background: lightgray; border-spacing: unset;">
-            <tr>
-                <td style="background: lightgray;">
+        
+        <table cellspacing="0" cellpadding="0" style="font-family: SansSerif; border: none; width: 100%; border-spacing: unset; font-size: 0.8em;">
+            <tr style="background:#D3D3D3; border-spacing: unset; height: 29px;">
+                <td style="background: lightgray; max-width: 6px;">
                     <span style="margin-left: 20px;"></span>
                 </td>
                 <td style="background: green; color: white; font-weight: bold;">
                     Requested Coverage
                 </td>
-                <td style="background: lightgray;">
-                    <span style="margin-left: 20px;"></span>
+                <td>
+                    <span style="margin-right: 303px;"></span>
                 </td>
-                
+            </tr>
+        </table>
+        
+        <table border="1" cellspacing="0" style="font-family: SansSerif; font-size: 0.7em; width: 100%; margin-top: 13px; border-style: solid; border-color: #DEB887; ">
+            <tr style="height: 22px;">
+                <td rowspan="3" style="padding-left: 10px; background: #FAEBD7; color: #DEB887; border: 0px; width: 13%;">
+                    Auto Liability
+                </td>
+                <td rowspan="3" style="border: 0px">
+                    {!IF(opportunity.Commercial_Auto_Liability__c != '', 'Yes', 'No')}
+                </td>
+                <td style="border: 0px; width: 21%;">
+                    Combinated Limit
+                </td>
+                <td style="border: 0px">
+                    $ {!opportunity.Commercial_Auto_Liability__c}
+                </td>
+                <td style="border: 0px">
+                </td>
+                <td style="border: 0px">
+                </td>
+            </tr>
+            
+            <tr style="height: 22px;">
+                <td style="border: 0px">
+                    Federal / MCS90 Filling:
+                </td>
+                <td style="border: 0px">
+                    XX
+                </td>
+                <td style="border: 0px">
+                    MC/MX:
+                </td>
+                <td style="border: 0px">
+                    {!opportunity.MC__c}
+                </td>
+            </tr>
+            
+            <tr style="height: 22px;">
+                <td style="border: 0px">
+                    BIPD State Filing:
+                </td>
+                <td style="border: 0px">
+                    XXXXX
+                </td>
+                <td style="border: 0px">
+                    Docket #:
+                </td>
+                <td style="border: 0px">
+                    XXXXXXX
+                </td>
+            </tr>
+        </table>
+        
+        <table border="1" cellspacing="0" style="font-family: SansSerif; font-size: 0.7em; width: 100%; margin-top: 13px; border-style: solid; border-color: #DEB887;">
+            <tr>
+                <td rowspan="1" style="padding-left: 10px; background: #FAEBD7; color: #DEB887; border: 0px; width: 13%;">
+                    Auto Physical Damage
+                </td>
+                <td rowspan="1" style="border: 0px">
+                    {!IF(TEXT(opportunity.Physical_Damage__c) != '', 'Yes', 'No')}
+                </td>
+                <td style="border: 0px; width: 21%;">
+                    Total Insured Value:
+                </td>
+                <td style="border: 0px">
+                    $ {!opportunity.Physical_Damage__c}
+                </td>
+                <td style="border: 0px">
+                    Deductible:
+                </td>
+                <td style="border: 0px">
+                    $ {!opportunity.Physical_Damage_Deductible__c}
+                </td>
             </tr>
         </table>
 
+        <table border="1" cellspacing="0" style="font-family: SansSerif; font-size: 0.7em; width: 100%; margin-top: 13px; border-style: solid; border-color: #DEB887;">
+            <tr style="height: 22px;">
+                <td rowspan="3" style="padding-left: 10px; background: #FAEBD7; color: #DEB887; border: 0px; width: 13%;">
+                	Motor truck Cargo
+                </td>
+                <td rowspan="3" style="border: 0px">
+                    {!IF(opportunity.Motor_Truck_Cargo__c != '', 'Yes', 'No')}
+                </td>
+                <td style="border: 0px; width: 21%;">
+                    Combinated Limit
+                </td>
+                <td style="border: 0px">
+                    {!opportunity.Motor_Truck_Cargo__c}
+                </td>
+                <td style="border-color: #DEB887; border-top: 0px; border-right: 0px; border-style: solid;">
+                    Reefer Breakdown
+                </td>
+                <td style="border-color: #DEB887; border-top: 0px; border-right: 0px; border-left: 0px; border-style: solid;">
+                    {!IF(opportunity.Reefer_Breakdown__c != false, 'Yes', 'No')}
+                </td>
+                <td style="border-color: #DEB887; border-top: 0px; border-right: 0px; border-left: 0px; border-style: solid;">
+                    Deductible:
+                </td>
+                <td style="border-color: #DEB887; border-top: 0px; border-right: 0px; border-left: 0px; border-style: solid;">
+                    $ {!opportunity.Motor_Truck_Cargo_Deductible__c}
+                </td>
+            </tr>
+            
+            <tr style="height: 22px;">
+                <td style="border: 0px">
+                    Federal / MCS90 Filling:
+                </td>
+                <td style="border: 0px">
+                    XX
+                </td>
+                <td style="border: 0px">
+                    MC/MX:
+                </td>
+                <td style="border: 0px">
+                    {!opportunity.MC__c}
+                </td>
+            </tr>
+            
+            <tr style="height: 22px;">
+                <td style="border: 0px">
+                    BIPD State Filing:
+                </td>
+                <td style="border: 0px">
+                    XXXXXX
+                </td>
+                <td style="border: 0px">
+                    Docket #:
+                </td>
+                <td style="border: 0px">
+                    XXXXXX
+                </td>
+            </tr>    
+        </table>
+        
+        <table border="1" cellspacing="0" style="font-family: SansSerif; font-size: 0.7em; width: 100%; margin-top: 13px; border-style: solid; border-color: #DEB887;">
+            <tr style="height: 22px;">
+                <td rowspan="4" style="padding-left: 10px; background: #FAEBD7; color: #DEB887; border: 0px; width: 13%;">
+                    Other
+                </td>
+                <td rowspan="4" style="border: 0px">
+                    
+                </td>
+                <td style="border: 0px; width: 21%;">
+                    General Liability:
+                </td>
+                <td style="border: 0px">
+                    {!IF(opportunity.General_Liability__c != '', 'Yes', 'No')}
+                </td>
+                <td style="border: 0px">
+                    Limit:
+                </td>
+                <td style="border: 0px">
+                    $ {!opportunity.General_Liability__c}
+                </td>
+                <td style="border: 0px">
+                </td>
+                <td style="border: 0px">
+                </td>
+            </tr>
+            
+            <tr style="height: 22px;">
+                <td style="border: 0px">
+                    PIP:
+                </td>
+                <td style="border: 0px">
+                    {!IF(TEXT(opportunity.Personal_Injury_Protection__c) != '', 'Yes', 'No')}
+                </td>
+                <td style="border: 0px">
+                    Limit:
+                </td>
+                <td style="border: 0px">
+                    $ {!opportunity.Personal_Injury_Protection__c}
+                </td>
+            </tr>
+            
+            <tr style="height: 22px;">
+                <td style="border: 0px">
+                    UM and UIM:
+                </td>
+                <td style="border: 0px">
+                    {!IF(opportunity.UM_UIM__c != '', 'Yes', 'No')}
+                </td>
+                <td style="border: 0px">
+                    Limit:
+                </td>
+                <td style="border: 0px">
+                    $ {!opportunity.UM_UIM__c}
+                </td>
+            </tr>
+            
+            <tr style="height: 22px;">
+                <td style="border: 0px">
+                    TI:
+                </td>
+                <td style="border: 0px">
+                    {!IF(TEXT(opportunity.Trailer_Interchange__c) != '', 'Yes', 'No')}
+                </td>
+                <td style="border: 0px">
+                    Limit:
+                </td>
+                <td style="border: 0px">
+                    $ {!opportunity.Trailer_Interchange__c}
+                </td>
+                <td style="border: 0px">
+                    Deductible:
+                </td>
+                <td style="border: 0px">
+                    $ {!opportunity.Trailer_Interchange_Deductible__c}
+                </td>
+            </tr>
+        </table>
+        
+        <table cellspacing="0" cellpadding="0" style="font-family: SansSerif; border: none; width: 100%; border-spacing: unset; font-size: 0.8em; margin-top: 50px;">
+            <tr style="background:#D3D3D3; border-spacing: unset; height: 29px;">
+                <td style="background: lightgray; max-width: 6px;">
+                    <span style="margin-left: 20px;"></span>
+                </td>
+                <td style="background: green; color: white; font-weight: bold;">
+                    Description of Operations
+                </td>
+                <td>
+                    <span style="margin-right: 303px; font-weight: bold;"> Unlimited</span>
+                </td>
+            </tr>
+        </table>
+        <table style="font-family: SansSerif; font-size: 0.7em; width: 100%; border-spacing: 0px;">
+            <tr>
+                <td style="width: 20%; border: 0px">
+                    Major Cities Traveled:
+                </td>
+                <td style="border: 0px">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Major States Traveled:
+                </td>
+                <td>
+                    {!opportunity.States_Travelled_to__c}
+                </td>
+            </tr>
+        </table>
+        
+        <table style="font-family: SansSerif; font-size: 0.7em; width: 100%; text-align: left; border-spacing: 0px;">
+            <tr style="background: #F5F4F2; border:0px; height: 29px;">
+                <td style="width: 50%;">
+                    Commodities Hauled
+                </td>
+                <td>
+                    Total Commodities: {!commoditiesTotalPercent} %
+                </td>
+            </tr>
+            <tr style="display:{!IF(opportunity.Commodities1__c = '','None','')}">
+                <td>
+                    {!opportunity.Commodities1__c}
+                </td>
+                <td>
+                    {!opportunity.CommoditiesP1__c} %
+                </td>
+            </tr>
+            <tr style="display:{!IF(opportunity.Commodities2__c = '','None','')}">
+                <td>
+                    {!opportunity.Commodities2__c} {!IF(opportunity.Commodities2__c != '',true,false)}
+                </td>
+                <td>
+                    {!opportunity.CommoditiesP2__c} %
+                </td>
+            </tr>
+            <tr style="display:{!IF(opportunity.Commodities3__c = '','None','')}">
+                <td>
+                    {!opportunity.Commodities3__c} {!IF(opportunity.Commodities3__c != '',true,false)}
+                </td>
+                <td>
+                    {!opportunity.CommoditiesP3__c} %
+                </td>
+            </tr>
+            <tr style="display:{!IF(opportunity.Commodities4__c = '','None','')}">
+                <td>
+                    {!opportunity.Commodities4__c} {!IF(opportunity.Commodities4__c != '',true,false)}
+                </td>
+                <td>
+                    {!opportunity.CommoditiesP4__c} %
+                </td>
+            </tr>
+            <tr style="display:{!IF(opportunity.Commodities5__c = '','None','')}">
+                <td>
+                    {!opportunity.Commodities5__c} {!IF(opportunity.Commodities5__c != '',true,false)}
+                </td>
+                <td>
+                    {!opportunity.CommoditiesP5__c} %
+                </td>
+            </tr>
+            <tr style="display:{!IF(opportunity.Commodities6__c = '','None','')}">
+                <td>
+                    {!opportunity.Commodities6__c} {!IF(opportunity.Commodities6__c != '',true,false)}
+                </td>
+                <td>
+                    {!opportunity.CommoditiesP6__c} %
+                </td>
+            </tr>
+            <tr style="display:{!IF(opportunity.Commodities7__c = '','None','')}">
+                <td>
+                    {!opportunity.Commodities7__c} {!IF(opportunity.Commodities7__c != '',true,false)}
+                </td>
+                <td>
+                    {!opportunity.CommoditiesP7__c} %
+                </td>
+            </tr>
+            <tr style="display:{!IF(opportunity.Commodities8__c = '','None','')}">
+                <td>
+                    {!opportunity.Commodities8__c} {!IF(opportunity.Commodities8__c != '',true,false)}
+                </td>
+                <td>
+                    {!opportunity.CommoditiesP8__c} %
+                </td>
+            </tr>
+        </table>
+        
+        <table cellspacing="0" cellpadding="0" style="font-family: SansSerif; font-size: 0.7em; border: none; width: 100%; border-spacing: unset; margin-top: 50px;">
+            <tr style="background:#D3D3D3; border-spacing: unset; height: 29px;">
+                <td style="background: lightgray; max-width: 6px;">
+                    <span style="margin-left: 20px;"></span>
+                </td>
+                <td style="background: green; color: white; font-weight: bold;">
+                    Driver Schedule
+                </td>
+                <td>
+                    <span style="margin-right: 303px;"></span>
+                </td>
+            </tr>
+        </table>
+        <table style="font-family: SansSerif; font-size: 0.7em; width: 100%; text-align: left; border-spacing: 0px;">
+            <tr style="background: #F5F4F2; border:0px; height: 30px; ">
+                <td>
+                    Driver Name
+                </td>
+                <td>
+                    DOB
+                </td>
+                <td>
+                    CDL#
+                </td>
+                <td>
+                    State Iss.
+                </td>
+                <td>
+                    Experience
+                </td>
+                <td>
+                    Date of hire
+                </td>
+            </tr>
+            <apex:repeat value="{!accountDrivers}" var="driver">
+                <tr>
+                    <td>
+                        {!driver.Name}
+                    </td>
+                    <td>
+                        <apex:outputText value="{0,date, MM/dd/yyyy}">
+                            <apex:param value="{!driver.DOB__c}" /> 
+                        </apex:outputText>
+                    </td>
+                    <td>
+                        {!driver.CDL__c}
+                    </td>
+                    <td>
+                        {!driver.State_License__c}
+                    </td>
+                    <td>
+                        {!driver.Driver_Experience__c }
+                    </td>
+                    <td>
+                        XXXXXXXXXXXXXXX
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+        
+        <table cellspacing="0" cellpadding="0" style="font-family: SansSerif; font-size: 0.7em; border: none; width: 100%; border-spacing: unset; margin-top: 50px;">
+            <tr style="background:#D3D3D3; border-spacing: unset; height: 29px;">
+                <td style="background: lightgray; max-width: 6px;">
+                    <span style="margin-left: 20px;"></span>
+                </td>
+                <td style="background: green; color: white; font-weight: bold;">
+                    Vehicle Schedule
+                </td>
+                <td>
+                    <span style="margin-right: 303px;"></span>
+                </td>
+            </tr>
+        </table>
+        <table style="font-family: SansSerif; font-size: 0.7em; width: 100%; text-align: left; border-spacing: 0px; ">
+            <tr style="background: #F5F4F2; border:0px; height: 30px; ">
+                <td>
+                    Year
+                </td>
+                <td>
+                    Make
+                </td>
+                <td>
+                    VIN#
+                </td>
+                <td>
+                    Body Type
+                </td>
+                <td>
+                    Stated Value
+                </td>
+            </tr>
+            <apex:repeat value="{!accountVehicles}" var="vehicle">
+                <tr>
+                    <td>
+                        {!vehicle.Year__c}
+                    </td>
+                    <td>
+                        {!vehicle.Make__c}
+                    </td>
+                    <td>
+                        {!vehicle.Name}
+                    </td>
+                    <td>
+                        XXXXXXXXXXXXX
+                    </td>
+                    <td>
+                        {!vehicle.Value__c  }
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+        
+        <table cellspacing="0" cellpadding="0" style="font-family: SansSerif; font-size: 0.7em; border: none; width: 100%; border-spacing: unset; margin-top: 50px;">
+            <tr style="background:#D3D3D3; border-spacing: unset; height: 29px;">
+                <td style="background: lightgray; max-width: 6px;">
+                    <span style="margin-left: 20px;"></span>
+                </td>
+                <td style="background: green; color: white; font-weight: bold;">
+                    Trailer Schedule
+                </td>
+                <td>
+                    <span style="margin-right: 303px;"></span>
+                </td>
+            </tr>
+        </table>
+        <table style="font-family: SansSerif; font-size: 0.7em; width: 100%; text-align: left; border-spacing: 0px;">
+            <tr style="background: #F5F4F2; border:0px; height: 30px; ">
+                <td>
+                    Year
+                </td>
+                <td>
+                    Make
+                </td>
+                <td>
+                    VIN#
+                </td>
+                <td>
+                    Body Type
+                </td>
+                <td>
+                    Stated Value
+                </td>
+            </tr>
+            <apex:repeat value="{!accountTrailers}" var="trailer">
+                <tr>
+                    <td>
+                        {!trailer.Year__c}
+                    </td>
+                    <td>
+                        {!trailer.Make__c}
+                    </td>
+                    <td>
+                        {!trailer.Name}
+                    </td>
+                    <td>
+                        {!trailer.Type__c}
+                    </td>
+                    <td>
+                        {!trailer.Value__c  }
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+        
     </body>
 
 </apex:page>

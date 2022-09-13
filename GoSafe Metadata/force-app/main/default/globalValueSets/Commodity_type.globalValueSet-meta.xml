@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Agricultural Equipment</fullName>
+        <default>false</default>
+        <label>Agricultural Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Air Conditioning Equipment</fullName>
+        <default>false</default>
+        <label>Air Conditioning Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Aircraft—Engines</fullName>
+        <default>false</default>
+        <label>Aircraft—Engines</label>
+    </customValue>
+    <customValue>
+        <fullName>Aircraft—Parts</fullName>
+        <default>false</default>
+        <label>Aircraft—Parts</label>
+    </customValue>
+    <customValue>
+        <fullName>Air Freight (Mail, UPS, &amp; FedEx)</fullName>
+        <default>false</default>
+        <label>Air Freight (Mail, UPS, &amp; FedEx)</label>
+    </customValue>
+    <customValue>
+        <fullName>Amazon Freight</fullName>
+        <default>false</default>
+        <label>Amazon Freight</label>
+    </customValue>
+    <customValue>
+        <fullName>Appliances—Major</fullName>
+        <default>false</default>
+        <label>Appliances—Major</label>
+    </customValue>
+    <customValue>
+        <fullName>Appliances—Small</fullName>
+        <default>false</default>
+        <label>Appliances—Small</label>
+    </customValue>
+    <customValue>
+        <fullName>ATVs, Snowmobiles &amp; Waverunners</fullName>
+        <default>false</default>
+        <label>ATVs, Snowmobiles &amp; Waverunners</label>
+    </customValue>
+    <customValue>
+        <fullName>Audio, Video &amp; Studio Equipment</fullName>
+        <default>false</default>
+        <label>Audio, Video &amp; Studio Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Parts &amp; Accessories (not Tires)</fullName>
+        <default>false</default>
+        <label>Auto Parts &amp; Accessories (not Tires)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bakery Goods &amp; Products</fullName>
+        <default>false</default>
+        <label>Bakery Goods &amp; Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Batteries</fullName>
+        <default>false</default>
+        <label>Batteries</label>
+    </customValue>
+    <customValue>
+        <fullName>Beer</fullName>
+        <default>false</default>
+        <label>Beer</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverage—Beer</fullName>
+        <default>false</default>
+        <label>Beverage—Beer</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverage—Liquor</fullName>
+        <default>false</default>
+        <label>Beverage—Liquor</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverage-- Non-Alcoholic</fullName>
+        <default>false</default>
+        <label>Beverage-- Non-Alcoholic</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverages</fullName>
+        <default>false</default>
+        <label>Beverages</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverage—Wine</fullName>
+        <default>false</default>
+        <label>Beverage—Wine</label>
+    </customValue>
+    <customValue>
+        <fullName>Bicycles, Segways &amp; Hoverboards</fullName>
+        <default>false</default>
+        <label>Bicycles, Segways &amp; Hoverboards</label>
+    </customValue>
+    <customValue>
+        <fullName>Books</fullName>
+        <default>false</default>
+        <label>Books</label>
+    </customValue>
+    <customValue>
+        <fullName>Bottles—Glass</fullName>
+        <default>false</default>
+        <label>Bottles—Glass</label>
+    </customValue>
+    <customValue>
+        <fullName>Bottles—Plastic</fullName>
+        <default>false</default>
+        <label>Bottles—Plastic</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Materials</fullName>
+        <default>false</default>
+        <label>Building Materials</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Materials (non-flatbed)</fullName>
+        <default>false</default>
+        <label>Building Materials (non-flatbed)</label>
+    </customValue>
+    <customValue>
+        <fullName>Butter</fullName>
+        <default>false</default>
+        <label>Butter</label>
+    </customValue>
+    <customValue>
+        <fullName>Cable &amp; Wire (not Copper/Fiber Optics)</fullName>
+        <default>false</default>
+        <label>Cable &amp; Wire (not Copper/Fiber Optics)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cable &amp; Wire-- Fiber Optics</fullName>
+        <default>false</default>
+        <label>Cable &amp; Wire-- Fiber Optics</label>
+    </customValue>
+    <customValue>
+        <fullName>Cameras &amp; Photographic Equipment</fullName>
+        <default>false</default>
+        <label>Cameras &amp; Photographic Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Camera Supplies &amp; Accessories</fullName>
+        <default>false</default>
+        <label>Camera Supplies &amp; Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Candy &amp; Confectionary</fullName>
+        <default>false</default>
+        <label>Candy &amp; Confectionary</label>
+    </customValue>
+    <customValue>
+        <fullName>Canned Goods</fullName>
+        <default>false</default>
+        <label>Canned Goods</label>
+    </customValue>
+    <customValue>
+        <fullName>Carpets &amp; Rugs (other than Oriental Rugs)</fullName>
+        <default>false</default>
+        <label>Carpets &amp; Rugs (other than Oriental Rugs)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cell Phones</fullName>
+        <default>false</default>
+        <label>Cell Phones</label>
+    </customValue>
+    <customValue>
+        <fullName>Cheese</fullName>
+        <default>false</default>
+        <label>Cheese</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemicals (not Red Label Placard)</fullName>
+        <default>false</default>
+        <label>Chemicals (not Red Label Placard)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemicals-- Red Label Placard</fullName>
+        <default>false</default>
+        <label>Chemicals-- Red Label Placard</label>
+    </customValue>
+    <customValue>
+        <fullName>China, Ceramics, Glassware &amp; Pottery</fullName>
+        <default>false</default>
+        <label>China, Ceramics, Glassware &amp; Pottery</label>
+    </customValue>
+    <customValue>
+        <fullName>Cigarettes, Cigars or Tobacco (mfgd.)</fullName>
+        <default>false</default>
+        <label>Cigarettes, Cigars or Tobacco (mfgd.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Clothing (Not Athletic, Designer Clothing)</fullName>
+        <default>false</default>
+        <label>Clothing (Not Athletic, Designer Clothing)</label>
+    </customValue>
+    <customValue>
+        <fullName>Clothing—Athletic</fullName>
+        <default>false</default>
+        <label>Clothing—Athletic</label>
+    </customValue>
+    <customValue>
+        <fullName>Clothing-- Blue Jeans</fullName>
+        <default>false</default>
+        <label>Clothing-- Blue Jeans</label>
+    </customValue>
+    <customValue>
+        <fullName>Clothing—Designer</fullName>
+        <default>false</default>
+        <label>Clothing—Designer</label>
+    </customValue>
+    <customValue>
+        <fullName>Clothing-- T Shirts</fullName>
+        <default>false</default>
+        <label>Clothing-- T Shirts</label>
+    </customValue>
+    <customValue>
+        <fullName>Coiled Steel</fullName>
+        <default>false</default>
+        <label>Coiled Steel</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer-- Desktop, Laptop &amp; Network Systems</fullName>
+        <default>false</default>
+        <label>Computer-- Desktop, Laptop &amp; Network Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer-- Games &amp; Software</fullName>
+        <default>false</default>
+        <label>Computer-- Games &amp; Software</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer-- Gaming Systems</fullName>
+        <default>false</default>
+        <label>Computer-- Gaming Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>Containerized Freight</fullName>
+        <default>false</default>
+        <label>Containerized Freight</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractors Equipment</fullName>
+        <default>false</default>
+        <label>Contractors Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Copper and Copper Products</fullName>
+        <default>false</default>
+        <label>Copper and Copper Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Copper and Copper Products (Flatbed)</fullName>
+        <default>false</default>
+        <label>Copper and Copper Products (Flatbed)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cosmetics (not Perfume)</fullName>
+        <default>false</default>
+        <label>Cosmetics (not Perfume)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cotton—Baled</fullName>
+        <default>false</default>
+        <label>Cotton—Baled</label>
+    </customValue>
+    <customValue>
+        <fullName>Dairy Products</fullName>
+        <default>false</default>
+        <label>Dairy Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Dept Store Merchandise (Macy&apos;s, Nordstrom&apos;s)</fullName>
+        <default>false</default>
+        <label>Dept Store Merchandise (Macy&apos;s, Nordstrom&apos;s)</label>
+    </customValue>
+    <customValue>
+        <fullName>Dept Store Merchandise (Wal-Mart, Target, etc.)</fullName>
+        <default>false</default>
+        <label>Dept Store Merchandise (Wal-Mart, Target, etc.)</label>
+    </customValue>
+    <customValue>
+        <fullName>DVD Players, MP3 Players, iPods &amp; iPads</fullName>
+        <default>false</default>
+        <label>DVD Players, MP3 Players, iPods &amp; iPads</label>
+    </customValue>
+    <customValue>
+        <fullName>DVDs, Compact Discs &amp; Tapes</fullName>
+        <default>false</default>
+        <label>DVDs, Compact Discs &amp; Tapes</label>
+    </customValue>
+    <customValue>
+        <fullName>Eggs</fullName>
+        <default>false</default>
+        <label>Eggs</label>
+    </customValue>
+    <customValue>
+        <fullName>Electrical Supplies (other than Copper)</fullName>
+        <default>false</default>
+        <label>Electrical Supplies (other than Copper)</label>
+    </customValue>
+    <customValue>
+        <fullName>Electronic—Accessories</fullName>
+        <default>false</default>
+        <label>Electronic—Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Electronic-- Data Processing (not Computers)</fullName>
+        <default>false</default>
+        <label>Electronic-- Data Processing (not Computers)</label>
+    </customValue>
+    <customValue>
+        <fullName>Explosives</fullName>
+        <default>false</default>
+        <label>Explosives</label>
+    </customValue>
+    <customValue>
+        <fullName>Fashion Accessories</fullName>
+        <default>false</default>
+        <label>Fashion Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Film</fullName>
+        <default>false</default>
+        <label>Film</label>
+    </customValue>
+    <customValue>
+        <fullName>Firearms and Ammunition</fullName>
+        <default>false</default>
+        <label>Firearms and Ammunition</label>
+    </customValue>
+    <customValue>
+        <fullName>Fresh Produce</fullName>
+        <default>false</default>
+        <label>Fresh Produce</label>
+    </customValue>
+    <customValue>
+        <fullName>Frozen Food (other than Meat &amp; Seafood)</fullName>
+        <default>false</default>
+        <label>Frozen Food (other than Meat &amp; Seafood)</label>
+    </customValue>
+    <customValue>
+        <fullName>Furniture (new from factory)</fullName>
+        <default>false</default>
+        <label>Furniture (new from factory)</label>
+    </customValue>
+    <customValue>
+        <fullName>Furs</fullName>
+        <default>false</default>
+        <label>Furs</label>
+    </customValue>
+    <customValue>
+        <fullName>General Merchandise/Dry Freight</fullName>
+        <default>false</default>
+        <label>General Merchandise/Dry Freight</label>
+    </customValue>
+    <customValue>
+        <fullName>Glass</fullName>
+        <default>false</default>
+        <label>Glass</label>
+    </customValue>
+    <customValue>
+        <fullName>Groceries</fullName>
+        <default>false</default>
+        <label>Groceries</label>
+    </customValue>
+    <customValue>
+        <fullName>Hardware</fullName>
+        <default>false</default>
+        <label>Hardware</label>
+    </customValue>
+    <customValue>
+        <fullName>Hazardous Materials (Placards)</fullName>
+        <default>false</default>
+        <label>Hazardous Materials (Placards)</label>
+    </customValue>
+    <customValue>
+        <fullName>Household Goods (Movers)</fullName>
+        <default>false</default>
+        <label>Household Goods (Movers)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ice Cream</fullName>
+        <default>false</default>
+        <label>Ice Cream</label>
+    </customValue>
+    <customValue>
+        <fullName>Jewelry &amp; Watches</fullName>
+        <default>false</default>
+        <label>Jewelry &amp; Watches</label>
+    </customValue>
+    <customValue>
+        <fullName>Juice</fullName>
+        <default>false</default>
+        <label>Juice</label>
+    </customValue>
+    <customValue>
+        <fullName>Landscaping Products</fullName>
+        <default>false</default>
+        <label>Landscaping Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Lawn and Garden Equipment</fullName>
+        <default>false</default>
+        <label>Lawn and Garden Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Leather and Leather Goods</fullName>
+        <default>false</default>
+        <label>Leather and Leather Goods</label>
+    </customValue>
+    <customValue>
+        <fullName>Logs, Timber &amp; Pulpwood (Logging)</fullName>
+        <default>false</default>
+        <label>Logs, Timber &amp; Pulpwood (Logging)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lumber, Pallets &amp; Wood (processed)</fullName>
+        <default>false</default>
+        <label>Lumber, Pallets &amp; Wood (processed)</label>
+    </customValue>
+    <customValue>
+        <fullName>Machinery (Light &amp; Non-precision)</fullName>
+        <default>false</default>
+        <label>Machinery (Light &amp; Non-precision)</label>
+    </customValue>
+    <customValue>
+        <fullName>Machinery-- Heavy &gt; 10,000lbs(flatbed)</fullName>
+        <default>false</default>
+        <label>Machinery-- Heavy &gt; 10,000lbs(flatbed)</label>
+    </customValue>
+    <customValue>
+        <fullName>Machinery-- Light &lt; 10,000 lbs (flatbed)</fullName>
+        <default>false</default>
+        <label>Machinery-- Light &lt; 10,000 lbs (flatbed)</label>
+    </customValue>
+    <customValue>
+        <fullName>Meat—Boxed</fullName>
+        <default>false</default>
+        <label>Meat—Boxed</label>
+    </customValue>
+    <customValue>
+        <fullName>Meat-- Hanging/Swinging</fullName>
+        <default>false</default>
+        <label>Meat-- Hanging/Swinging</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Diagnostic Equipment</fullName>
+        <default>false</default>
+        <label>Medical Diagnostic Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Supplies (not Medicine or Drugs)</fullName>
+        <default>false</default>
+        <label>Medical Supplies (not Medicine or Drugs)</label>
+    </customValue>
+    <customValue>
+        <fullName>Memorabilia &amp; Collectibles</fullName>
+        <default>false</default>
+        <label>Memorabilia &amp; Collectibles</label>
+    </customValue>
+    <customValue>
+        <fullName>Metal (other than Copper)</fullName>
+        <default>false</default>
+        <label>Metal (other than Copper)</label>
+    </customValue>
+    <customValue>
+        <fullName>Metal Products (finished-- not precious)</fullName>
+        <default>false</default>
+        <label>Metal Products (finished-- not precious)</label>
+    </customValue>
+    <customValue>
+        <fullName>Milk</fullName>
+        <default>false</default>
+        <label>Milk</label>
+    </customValue>
+    <customValue>
+        <fullName>Mobile Homes-- No Motor</fullName>
+        <default>false</default>
+        <label>Mobile Homes-- No Motor</label>
+    </customValue>
+    <customValue>
+        <fullName>Money/Securities</fullName>
+        <default>false</default>
+        <label>Money/Securities</label>
+    </customValue>
+    <customValue>
+        <fullName>Motorcycles</fullName>
+        <default>false</default>
+        <label>Motorcycles</label>
+    </customValue>
+    <customValue>
+        <fullName>Office Equipment</fullName>
+        <default>false</default>
+        <label>Office Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Office Supplies</fullName>
+        <default>false</default>
+        <label>Office Supplies</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil Field-- Heavy Equipment</fullName>
+        <default>false</default>
+        <label>Oil Field-- Heavy Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil Field - Pipe &amp; Valves</fullName>
+        <default>false</default>
+        <label>Oil Field - Pipe &amp; Valves</label>
+    </customValue>
+    <customValue>
+        <fullName>Optical Goods</fullName>
+        <default>false</default>
+        <label>Optical Goods</label>
+    </customValue>
+    <customValue>
+        <fullName>Oriental Rugs</fullName>
+        <default>false</default>
+        <label>Oriental Rugs</label>
+    </customValue>
+    <customValue>
+        <fullName>Oversized/Overweight Loads</fullName>
+        <default>false</default>
+        <label>Oversized/Overweight Loads</label>
+    </customValue>
+    <customValue>
+        <fullName>Packaged Food</fullName>
+        <default>false</default>
+        <label>Packaged Food</label>
+    </customValue>
+    <customValue>
+        <fullName>Paint</fullName>
+        <default>false</default>
+        <label>Paint</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper, Paper Products &amp; Printed Matter</fullName>
+        <default>false</default>
+        <label>Paper, Paper Products &amp; Printed Matter</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper Products</fullName>
+        <default>false</default>
+        <label>Paper Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Perfume</fullName>
+        <default>false</default>
+        <label>Perfume</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmaceutical Products-- Over the Counter</fullName>
+        <default>false</default>
+        <label>Pharmaceutical Products-- Over the Counter</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmaceutical Products—Prescription</fullName>
+        <default>false</default>
+        <label>Pharmaceutical Products—Prescription</label>
+    </customValue>
+    <customValue>
+        <fullName>Pipe (other than Copper)</fullName>
+        <default>false</default>
+        <label>Pipe (other than Copper)</label>
+    </customValue>
+    <customValue>
+        <fullName>Plants-- Cut Flowers</fullName>
+        <default>false</default>
+        <label>Plants-- Cut Flowers</label>
+    </customValue>
+    <customValue>
+        <fullName>Plants—Flowers</fullName>
+        <default>false</default>
+        <label>Plants—Flowers</label>
+    </customValue>
+    <customValue>
+        <fullName>Plants-- Trees &amp; Shrubs</fullName>
+        <default>false</default>
+        <label>Plants-- Trees &amp; Shrubs</label>
+    </customValue>
+    <customValue>
+        <fullName>Plastic Products</fullName>
+        <default>false</default>
+        <label>Plastic Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Plumbing Supplies (other than Copper)</fullName>
+        <default>false</default>
+        <label>Plumbing Supplies (other than Copper)</label>
+    </customValue>
+    <customValue>
+        <fullName>Poultry</fullName>
+        <default>false</default>
+        <label>Poultry</label>
+    </customValue>
+    <customValue>
+        <fullName>Precious Metals, Bullion &amp; Alloys</fullName>
+        <default>false</default>
+        <label>Precious Metals, Bullion &amp; Alloys</label>
+    </customValue>
+    <customValue>
+        <fullName>Printing Presses</fullName>
+        <default>false</default>
+        <label>Printing Presses</label>
+    </customValue>
+    <customValue>
+        <fullName>Produce</fullName>
+        <default>false</default>
+        <label>Produce</label>
+    </customValue>
+    <customValue>
+        <fullName>Produce (other than refrigerated)</fullName>
+        <default>false</default>
+        <label>Produce (other than refrigerated)</label>
+    </customValue>
+    <customValue>
+        <fullName>Purses, Handbags, Wallets &amp; Belts</fullName>
+        <default>false</default>
+        <label>Purses, Handbags, Wallets &amp; Belts</label>
+    </customValue>
+    <customValue>
+        <fullName>Radioactive Material</fullName>
+        <default>false</default>
+        <label>Radioactive Material</label>
+    </customValue>
+    <customValue>
+        <fullName>Rigging (any property requiring)</fullName>
+        <default>false</default>
+        <label>Rigging (any property requiring)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rubber Products (other than Tires)</fullName>
+        <default>false</default>
+        <label>Rubber Products (other than Tires)</label>
+    </customValue>
+    <customValue>
+        <fullName>Seafood-- Fresh (other than Canned Seafood)</fullName>
+        <default>false</default>
+        <label>Seafood-- Fresh (other than Canned Seafood)</label>
+    </customValue>
+    <customValue>
+        <fullName>Seafood-- Frozen (other than Canned Seafood)</fullName>
+        <default>false</default>
+        <label>Seafood-- Frozen (other than Canned Seafood)</label>
+    </customValue>
+    <customValue>
+        <fullName>Shoes (other than Designer &amp; Athletic)</fullName>
+        <default>false</default>
+        <label>Shoes (other than Designer &amp; Athletic)</label>
+    </customValue>
+    <customValue>
+        <fullName>Shoes-- Designer &amp; Athletic</fullName>
+        <default>false</default>
+        <label>Shoes-- Designer &amp; Athletic</label>
+    </customValue>
+    <customValue>
+        <fullName>Signs</fullName>
+        <default>false</default>
+        <label>Signs</label>
+    </customValue>
+    <customValue>
+        <fullName>Silk &amp; Silk Products</fullName>
+        <default>false</default>
+        <label>Silk &amp; Silk Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Soap Products/Household Cleansers</fullName>
+        <default>false</default>
+        <label>Soap Products/Household Cleansers</label>
+    </customValue>
+    <customValue>
+        <fullName>Solar Panels</fullName>
+        <default>false</default>
+        <label>Solar Panels</label>
+    </customValue>
+    <customValue>
+        <fullName>Sporting Goods/Equipment</fullName>
+        <default>false</default>
+        <label>Sporting Goods/Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Stereos &amp; Radios</fullName>
+        <default>false</default>
+        <label>Stereos &amp; Radios</label>
+    </customValue>
+    <customValue>
+        <fullName>Stone Slab/Products (Marble, etc.)</fullName>
+        <default>false</default>
+        <label>Stone Slab/Products (Marble, etc.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Swimming Pools, Spas &amp; Hot Tubs</fullName>
+        <default>false</default>
+        <label>Swimming Pools, Spas &amp; Hot Tubs</label>
+    </customValue>
+    <customValue>
+        <fullName>Televisions</fullName>
+        <default>false</default>
+        <label>Televisions</label>
+    </customValue>
+    <customValue>
+        <fullName>Textiles (Cloth)</fullName>
+        <default>false</default>
+        <label>Textiles (Cloth)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tires</fullName>
+        <default>false</default>
+        <label>Tires</label>
+    </customValue>
+    <customValue>
+        <fullName>Tobacco (unrefined)</fullName>
+        <default>false</default>
+        <label>Tobacco (unrefined)</label>
+    </customValue>
+    <customValue>
+        <fullName>Toiletries</fullName>
+        <default>false</default>
+        <label>Toiletries</label>
+    </customValue>
+    <customValue>
+        <fullName>Tools</fullName>
+        <default>false</default>
+        <label>Tools</label>
+    </customValue>
+    <customValue>
+        <fullName>Toys (Hobbies &amp; Crafts)</fullName>
+        <default>false</default>
+        <label>Toys (Hobbies &amp; Crafts)</label>
+    </customValue>
+    <customValue>
+        <fullName>Trailers (New for delivery)</fullName>
+        <default>false</default>
+        <label>Trailers (New for delivery)</label>
+    </customValue>
+    <customValue>
+        <fullName>Transformers</fullName>
+        <default>false</default>
+        <label>Transformers</label>
+    </customValue>
+    <customValue>
+        <fullName>Turbines</fullName>
+        <default>false</default>
+        <label>Turbines</label>
+    </customValue>
+    <customValue>
+        <fullName>Wood Products (other than Furniture)</fullName>
+        <default>false</default>
+        <label>Wood Products (other than Furniture)</label>
+    </customValue>
+    <masterLabel>Commodity type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

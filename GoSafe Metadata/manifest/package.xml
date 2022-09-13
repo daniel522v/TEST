@@ -29,8 +29,39 @@
         <name>ContentAsset</name>
     </types>
     <types>
+        <members>Driver__c</members>
+        <members>In_App_Checklist_Settings__c</members>
+        <members>Insurance_Documentation__c</members>
+        <members>InsurancePolicy__c</members>
+        <members>Trailer__c</members>
+        <members>Vehicle__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Opportunity_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Commodity_type</members>
+        <members>Coverages</members>
+        <members>States</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
+        <members>Opportunity-Opportunity Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
         <members>*</members>
         <name>LightningComponentBundle</name>
+    </types>
+        <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Opportunity.QuickQuote</members>
+        <name>QuickAction</name>
     </types>
     <types>
         <members>*</members>

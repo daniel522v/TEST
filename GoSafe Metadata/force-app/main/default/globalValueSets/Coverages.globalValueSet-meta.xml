@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Commercial Auto Liability</fullName>
+        <default>false</default>
+        <label>Commercial Auto Liability</label>
+    </customValue>
+    <customValue>
+        <fullName>Excess</fullName>
+        <default>false</default>
+        <label>Excess</label>
+    </customValue>
+    <customValue>
+        <fullName>General Liability</fullName>
+        <default>false</default>
+        <label>General Liability</label>
+    </customValue>
+    <customValue>
+        <fullName>Motor Truck Cargo</fullName>
+        <default>false</default>
+        <label>Motor Truck Cargo</label>
+    </customValue>
+    <customValue>
+        <fullName>Motor Truck Cargo Deductible</fullName>
+        <default>false</default>
+        <label>Motor Truck Cargo Deductible</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Owned Trailer</fullName>
+        <default>false</default>
+        <label>Non Owned Trailer</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Owned Trailer Deductible</fullName>
+        <default>false</default>
+        <label>Non Owned Trailer Deductible</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Coverage</fullName>
+        <default>false</default>
+        <label>Other Coverage</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Injury Protection</fullName>
+        <default>false</default>
+        <label>Personal Injury Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>Physical Damage</fullName>
+        <default>false</default>
+        <label>Physical Damage</label>
+    </customValue>
+    <customValue>
+        <fullName>Physical Damage Deductible</fullName>
+        <default>false</default>
+        <label>Physical Damage Deductible</label>
+    </customValue>
+    <customValue>
+        <fullName>Reefer Breakdown</fullName>
+        <default>false</default>
+        <label>Reefer Breakdown</label>
+    </customValue>
+    <customValue>
+        <fullName>Trailer Interchange</fullName>
+        <default>false</default>
+        <label>Trailer Interchange</label>
+    </customValue>
+    <customValue>
+        <fullName>Trailer Interchange Deductible</fullName>
+        <default>false</default>
+        <label>Trailer Interchange Deductible</label>
+    </customValue>
+    <customValue>
+        <fullName>UM/UIM</fullName>
+        <default>false</default>
+        <label>UM/UIM</label>
+    </customValue>
+    <customValue>
+        <fullName>Workers Comp</fullName>
+        <default>false</default>
+        <label>Workers Comp</label>
+    </customValue>
+    <masterLabel>Coverages</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
