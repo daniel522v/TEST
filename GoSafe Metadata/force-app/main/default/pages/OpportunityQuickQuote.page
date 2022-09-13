@@ -220,13 +220,13 @@
                     Limit
                 </td>
                 <td style="border: 0px; width: 10%;">
-                    {!opportunity.Motor_Truck_Cargo__c}
+                    $ {!opportunity.Motor_Truck_Cargo__c}
                 </td>
                 <td style="border: 0px;">
                     Deductible
                 </td>
                 <td style="border: 0px">
-                    {!opportunity.Motor_Truck_Cargo_Deductible__c}
+                    $ {!opportunity.Motor_Truck_Cargo_Deductible__c}
                 </td>
                 <td style="border-color: #DEB887; border-top: 0px; border-right: 0px; border-style: solid;">
                     Reefer Breakdown
@@ -243,20 +243,20 @@
             </tr>
             
             <tr style="height: 22px;">
-                <td colspan="2" style="border: 0px">
+                <td colspan="3" style="border: 0px">
                     Federal Cargo (BMC34) Filing:
                 </td>
                 <td style="border: 0px">
-                    XXXXXX
+                    $ XXXXXX
                 </td>
             </tr>
             
             <tr style="height: 22px;">
-                <td style="border: 0px">
+                <td colspan="3" style="border: 0px">
                     Cargo State Filing:
                 </td>
                 <td style="border: 0px">
-                    XXXXXX
+                    $ XXXXXX
                 </td>
             </tr>    
         </table>
